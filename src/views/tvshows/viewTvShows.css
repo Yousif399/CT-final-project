@@ -1,0 +1,114 @@
+div.view-tv{
+    padding: 3rem 18rem;
+    background-color: #3027271f;
+
+}
+.view-tv h1{
+    display: inline-block;
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    background: linear-gradient(to left, #f800f8, #a37bc0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .4s ease-in-out;
+    &:hover{transform: skew(-4deg);}
+
+}
+.view-tv h1 :hover{
+  color: #f811f8;
+}
+
+p.desc{
+    font-size: 19px;
+    margin-top: 3rem ;
+    color: #395469;
+    font-weight: bolder;
+    line-height: 1.7rem;
+}
+p.desc button{
+    background-color: transparent;
+    border-radius: 35px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #c618b4;
+
+}
+.details{
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 2px solid  #0b3c6158;
+}
+
+.detail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.img-view-tv img{
+    border-radius: 30px;
+    max-width: 85%;
+}
+p span:first-child{
+    color: #0e295c;
+    font-weight: 700;
+    
+}
+.tv-det{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #395469;
+}
+.tv-det p{
+    display: flex;
+    gap: .5rem;
+    
+}
+.trailer-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.trailer-con iframe{
+    outline: none;
+    background: #fff;
+    border: 2px solid #39546971;
+    padding: 1rem;
+    height: 32rem;
+}
+
+iframe{
+    border-radius: 35px;
+}
+
+div .chars{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-gap: 1.9rem;
+    background: #ffff;
+    padding: 2rem;
+    border-radius: 30px;
+    border: 2px solid #39546971;
+    
+}
+div .view-chars img{
+    border-radius: 20px;
+    max-width: 100%;
+}
+div .view-chars h3{
+    color: #8a36c5;
+    font-weight: 600;
+}
+div .view-chars h5{
+    color: #c433bd;
+    font-weight: 500;
+}
+p span{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

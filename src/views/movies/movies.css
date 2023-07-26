@@ -1,0 +1,42 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+div #movies.container {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 1.5rem;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 30px;
+    border: 2px solid #39546951;
+    
+}
+img.movies-imgs{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 700px;   
+    border-radius: 25px;
+    border: 2px solid #1672b878;
+}
+
+h2.movies-txt{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 23px;
+    font-family:fantasy;
+}
+.box-txt {
+    font-size: 19px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
