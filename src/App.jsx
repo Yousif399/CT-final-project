@@ -2,38 +2,62 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Anime from './views/anime/anime'
-import Home from './views/home'
 import TvShows from './views/tvshows/tvShows'
 import Movie from './views/movies/movie'
-import Cart from './views/cart'
-import Shop from './views/shop'
-import MyNav from './comp/myNav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ViewAnime from './views/anime/ViewAnime'
 import ViewTvShow from './views/tvshows/viewTvShows'
 import ViewMovies from './views/movies/viewMovie'
-
+import LogIn from './views/auth/LogIn'
+import SignUp from './views/auth/SignUp'
+import ViewHome from './views/home/ViewHome'
+import Home from './views/home/home'
+import Header from './views/home/Header'
+import Shop from './views/shop/shop'
+import Cart from './views/shop/cart'
+import Shop2 from './views/shop/search'
+import Favourite from './Favourite'
+import ViewFavourite from './views/ViewFavourite'
+import ViewFavourite1 from './views/ViewFavourite1'
+import ViewFavourite2 from './views/ViewFavourite2'
+import Favourite1 from './Favourite1'
+import Favourite2 from './Favourite2'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <MyNav />
+
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Header/>}/>
+        <Route path='/main' element={<Home />} />
+        <Route path='/homemovie/:id' element={<ViewHome />} />  
+
+
         <Route path='/tvshows' element={<TvShows />} />
         <Route path='/tvshows/:id' element={<ViewTvShow />} />
 
         <Route path='/movie' element={<Movie />} />
-      <Route path='/movies/:id' element={<ViewMovies />} />
+        <Route path='/movies/:id' element={<ViewMovies />} />
 
         <Route path='/anime' element={<Anime />} />
         <Route path='/anime/:id' element={<ViewAnime />} />
 
+        <Route path='/shop2' element={<Shop2 />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/cart' element={<Cart />} />
+
+        <Route path='/fav' element={<Favourite/>}/>
+        <Route path='/fav1' element={<Favourite1/>}/>
+        <Route path='/fav2' element={<Favourite2/>}/>
+        <Route path='/fav/:id' element={<ViewFavourite />} />
+        <Route path='/fav1/:id' element={<ViewFavourite1 />} />
+        <Route path='/fav2/:id' element={<ViewFavourite2 />} />
+
+        <Route path='/login' element={<LogIn />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
     </>
   )

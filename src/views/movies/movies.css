@@ -38,5 +38,31 @@ h2.movies-txt{
 .box-txt {
     font-size: 19px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
+
+#second-nav-bar{
+    display: flex;
+    margin: auto;
+    font-size: x-large;
+    /* border: 2px solid red; */
+    border-radius: 50px;
+    padding: 6px;
+    margin: 6px;
+}
+
+.small-nav{
+    display: flex;
+    
+}
+
+div #container-movie{
+
+    display: flex;
+    justify-content: center;
+}
+
+#container-movie {
+    margin-top: 12px;
+    margin-bottom: 6px;
 }

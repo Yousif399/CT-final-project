@@ -1,0 +1,12 @@
+.nott-cont{
+   display: flex;
+   margin: auto;
+}
+#nav-element:hover{
+   background: rgba(182, 123, 184, 0.855);
+}
+#nav-element:hover{
+   background-color: rgba(212, 19, 255, 0.851);
+   border-radius: 20px;
+  
+}

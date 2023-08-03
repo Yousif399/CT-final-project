@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+
+div.sh{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(137, 43, 226, 0.304);
+    border-radius: 30px;
+}
+
+ .form-box{
+    position: relative;
+    width: 450px;
+    height: 600px;
+    background-color: blanchedalmond;
+    background: transparent;
+    border: 2px solid gray;
+    border-radius: 20px;
+    backdrop-filter: blur(70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 3em;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin: 30px 0;
+    width: 315px;
+    border-bottom:  2px solid #ffff;
+}
+
+
+
+.input-box .mb-3{
+   
+    transform: translateY(-15%);
+    color: #ffff;
+    font-size: 1em;
+
+    transition: .5s;
+    width: 100%;
+    /* height: 50px; */
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #ffff;
+} 
+Button.btn{
+    color: black;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.register{
+    text-align: center;
+}
+
+
+.form-control{
+  min-width: 260px;
+}
+
+.form-label, .form-check-label{
+  font-size: 20px;color: rgb(244, 242, 238);
+  font-weight: 600;
+  padding: 4px;
+}
+
+
+
+
+.card {
+    position: relative;
+    width: 450px;
+    height: 600px;
+    color: #fff;
+    transition: 0.8s;
+    cursor: pointer;
+    transform: rotateX(-55deg) rotateY(15deg) rotateZ(60deg);
+  }
+  
+  .card:hover {
+    transform: rotate(0);
+  }
+  
+  .card:active {
+    transform: translateY(-20px) rotate(-3deg);
+    scale: 0.95;
+  }
+  
+  .card::before {
+    content: '';
+    width: 450px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(315deg, #ac03f4, #3cff00);
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+    filter: blur(30px);
+  }
+  
+  .card span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+  
+  .card span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .card .content {
+    position: relative;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5em;
+  }

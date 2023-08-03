@@ -8,7 +8,9 @@ div.view-movie{
     font-size: 4rem;
     margin-bottom: 2.5rem;
     cursor: pointer;
-    background: linear-gradient(to left, #f800f8, #a37bc0);
+    /* background: linear-gradient(to left, #f800f8, #a37bc0); */
+    background: linear-gradient(to left, #1b181b92, #0b000b);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all .4s ease-in-out;
@@ -19,14 +21,14 @@ div.view-movie{
   color: #f811f8;
 }
 
-p.desc{
+div.desc{
     font-size: 19px;
     margin-top: 3rem ;
     color: #395469;
     font-weight: bolder;
     line-height: 1.7rem;
 }
-p.desc button{
+div.desc button{
     background-color: transparent;
     border-radius: 35px;
     outline: none;
@@ -53,7 +55,10 @@ p.desc button{
 p span:first-child{
     color: #0e295c;
     font-weight: 700;
-    
+}
+div.lang-gen{
+    color: #0e295c;
+    font-weight: 700;
 }
 .movie-det{
     display: flex;
@@ -67,6 +72,11 @@ p span:first-child{
     display: flex;
     gap: 1rem;
     
+}
+.movie-det .lang-gen{
+    display: flex;
+    gap: 1.2rem;
+ 
 }
 .trailer-con{
     display: flex;
@@ -108,7 +118,29 @@ div .view-chars h3{
 div .view-chars h5{
     color: #c433bd;
     font-weight: 500;
+   
 }
-p span{
+p span,div.lang-gen{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span.lang{
+    display: flex;
+    align-items: center;
+}
+span.genres{
+    display: flex;
+    align-items: center;
+}
+
+
+div.gen-txt{
+    margin: 2px 11px
+}
+
+.butons-shows {
+    margin-top: 1rem;
+    display: flex;
+    width: 30%;
+  
 }

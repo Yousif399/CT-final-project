@@ -41,3 +41,70 @@ h2.tv-shows-txt{
 
 }
 
+#second-nav-bar{
+    display: flex;
+    margin: auto;
+    font-size: x-large;
+    border: 2px solid rgb(80, 67, 67);
+    border-radius: 50px;
+    padding: 6px;
+    margin: 6px;
+}
+
+.small-nav{
+    display: flex;
+    
+}
+
+div #container-show{
+
+    display: flex;
+    justify-content: center;
+}
+#second-nav-bar {
+    color: rgb(2, 1, 1);
+    background-color: #e9e6e6;
+    
+}
+#second-nav-bar:hover{
+    color: rgb(10, 37, 56);
+    background-color: rgba(212, 19, 255, 0.851);
+}
+#nav-con.second-nav-bar{
+    background: rgb(233, 233, 233);
+}
+#nav-con.second-nav-bar:hover{
+    background: rgba(182, 123, 184, 0.855);
+}
+
+
+.navbar{
+    background: rgb(233, 233, 233);
+   
+}
+
+.navbar:hover{
+    background: rgba(182, 123, 184, 0.855);
+
+}
+#nav-element:hover{
+    background-color: rgba(212, 19, 255, 0.851);
+    border-radius: 20px;
+   
+}
+#anime:hover{
+    background-color: rgba(212, 19, 255, 0.851);
+    border-radius: 20px;
+   
+}
+#app-logo:hover{
+    background-color: rgba(212, 19, 255, 0.851);
+    border-radius: 30px;
+    
+    
+}
+
+#container-show {
+    margin-top: 12px;
+    margin-bottom: 6px;
+}

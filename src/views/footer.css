@@ -1,0 +1,265 @@
+.section__padding{
+    padding: 4rem 4rem;
+}
+.footer{
+    background-color: whitesmoke;
+}
+.sb__footer{
+    display: flex;
+    flex-direction: column;
+}
+.sb__footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.sb__footer-links_div{
+    width: 150px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: black;
+}
+
+a{
+    color: rgb(175, 175,179);
+    text-decoration: none;
+}
+
+
+.socialmedia{
+    display: flex;
+    flex-direction: row;
+}
+.socialmedia img{
+    width: 80%;
+}
+
+.sb__footer-links_div h4{
+    font-size: 15px;
+    line-height: 17px;
+    margin-bottom: 0.9rem;
+}
+
+.sb__footer-links_div p{
+    font-size: 11px;
+    line-height: 15px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+
+}
+
+.sb__footer-below{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+
+}
+.sb__footer-below-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.sb__footer-below-links p{
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+hr{
+    color: rgb(70, 2, 84) !important;
+    width: 100%;
+  
+}
+
+.sb__footer-copyrights p{
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(186, 21, 21);
+    font-weight: 600;
+}
+@media screen and (max-width: 850px) {
+    .sb__footer-heading h1{
+        font-size: 44px;
+        line-height: 50px;
+    }
+    
+}
+@media screen and (max-width: 550px){
+    .sb__footer-heading h1{
+        font-size: 34px;
+        line-height: 42px;
+    }
+    .sb__footer-links div{
+        margin: 1rem 0;
+    }
+    .sb__footer-btn p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .sb__footer-below{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .sb__footer-below-links{
+        flex-direction: column;
+    }
+    .sb__footer-below-links p{
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sb__footer-heading h1{
+        font-size: 27px;
+        line-height: 38px;
+    }
+    
+}
+
+
+
+
+
+
+.main-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    gap: 0.5em;
+  }
+  
+  .up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .card1-media {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+  }
+  
+  .card2-media {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .twitter {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+  }
+  
+  .card3-media {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .github {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+  }
+  
+  .card4-media {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .discord {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #8c9eff;
+  }
+  
+  .card1-media:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+  }
+  
+  .card1-media:hover .instagram {
+    fill: white;
+  }
+  
+  .card2-media:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03A9F4;
+  }
+  
+  .card2-media:hover .twitter {
+    fill: white;
+  }
+  
+  .card3-media:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: black;
+  }
+  
+  .card3-media:hover .github {
+    fill: white;
+  }
+  
+  .card4-media:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #8c9eff;
+  }
+  
+  .card4-media:hover .discord {
+    fill: white;
+  }
+
+h4.h4-media{
+    text-align: center;
+}

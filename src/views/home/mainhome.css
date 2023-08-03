@@ -1,0 +1,151 @@
+#app-logo {
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.navbar {
+    height: 90px;
+}
+
+.slide {
+    background-color: #000408;
+}
+
+#basic-nav-dropdown {
+    margin-right: 400px;
+}
+
+.sign-log-icons {
+    text-align: center;
+    /* margin: 10px; */
+}
+
+.loginicon {
+    margin: .5rem;
+}
+
+.loginicon:hover {
+
+    background-color: #fff;
+}
+
+header {
+    height: 100vh;
+
+}
+
+.container .wrapper {
+    padding: 2rem;
+    background-color: #6f547a;
+    font-size: 30px;
+    border-radius: 50px;
+
+
+
+}
+
+#slide {
+    margin-top: 50px;
+    border-radius: 50px;
+    }
+
+div.desc1 {
+    font-size: 30px;
+    margin-top: 3rem;
+    color: #06090c;
+    font-weight: bolder;
+    line-height: 1.7rem;
+    line-height: 35px;
+}
+
+div.desc1 button {
+    background-color: transparent;
+    border-radius: 35px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: #1d0a1b;
+
+}
+
+div.banner-img {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border-radius: 40px;
+
+}
+
+.slide-img {
+    border-radius: 30px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+div.slider-des {
+    text-align: center;
+
+
+}
+
+.sslier-des,
+h1 {
+    font-size: 45px;
+    font-weight: 600;
+
+}
+
+.sslier-des,
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.starts-img {
+    margin-bottom: 6px;
+    padding: .5rem;
+
+    height: 120px;
+
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    /* padding: 10px 25px; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-1 {
+    background: rgb(139, 67, 147);
+    background: linear-gradient(0deg, rgb(134, 29, 148) 0%, rgb(133, 0, 250) 100%);
+    border: none;
+
+}
+
+.btn-1:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-1:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+

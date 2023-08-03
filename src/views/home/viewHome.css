@@ -1,32 +1,32 @@
-div.view-tv{
+div.view-movie{
     padding: 3rem 18rem;
     background-color: #3027271f;
 
 }
-.view-tv h1{
+.view-movie h1{
     display: inline-block;
     font-size: 4rem;
     margin-bottom: 2.5rem;
     cursor: pointer;
-    background: linear-gradient(to left, #1b181b92, #0b000b);
+    background: linear-gradient(to left, #f800f8, #a37bc0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all .4s ease-in-out;
     &:hover{transform: skew(-4deg);}
 
 }
-.view-tv h1 :hover{
+.view-movie h1 :hover{
   color: #f811f8;
 }
 
-p.desc{
+div.desc{
     font-size: 19px;
     margin-top: 3rem ;
     color: #395469;
     font-weight: bolder;
     line-height: 1.7rem;
 }
-p.desc button{
+div.desc button{
     background-color: transparent;
     border-radius: 35px;
     outline: none;
@@ -46,27 +46,29 @@ p.desc button{
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
-.img-view-tv img{
+.img-view-movie img{
     border-radius: 30px;
     max-width: 85%;
 }
 p span:first-child{
     color: #0e295c;
     font-weight: 700;
-    
-}
-.lang-tv{
-    color: #0e295c;
-    font-weight: 700;
-    
-}
-.genres-tv{
-    color: #0e295c;
-    font-weight: 700;
-    
-}
 
-.tv-det{
+}
+.movie-det .lang{
+    color: #0e295c;
+    font-weight: 700;
+
+}
+.movie-det .genres{
+    color: #0e295c;
+    font-weight: 700;
+}
+div.lang-gen{
+    color: #0e295c;
+    font-weight: 700;
+}
+.movie-det{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,18 +76,23 @@ p span:first-child{
     font-weight: 600;
     color: #395469;
 }
-.tv-det p{
+.movie-det p{
     display: flex;
-    gap: .5rem;
+    gap: 1rem;
     
 }
-.tv-det .lan{
+.movie-det .lan{
     display: flex;
     gap: 1rem;
 }
-.tv-det .gen{
+.movie-det .gen{
     display: flex;
     gap: 1rem;
+}
+.movie-det .lang-gen{
+    display: flex;
+    gap: 1.2rem;
+ 
 }
 .trailer-con{
     display: flex;
@@ -106,6 +113,7 @@ iframe{
     border-radius: 35px;
 }
 
+
 div .chars{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
@@ -118,7 +126,6 @@ div .chars{
 }
 div .view-chars img{
     border-radius: 20px;
-    max-width: 100%;
 }
 div .view-chars h3{
     color: #8a36c5;
@@ -127,31 +134,22 @@ div .view-chars h3{
 div .view-chars h5{
     color: #c433bd;
     font-weight: 500;
+   
 }
-p span{
+p span,div.lang-gen{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-span.lang-tv{
+
+span.lang{
     display: flex;
     align-items: center;
 }
-span.genres-tv{
+span.genres{
     display: flex;
     align-items: center;
 }
 
 
-div.gen-txt-tv{
-    margin: 2px 8px
+div.gen-txt{
+    margin: 2px 11px
 }
-.samll-navbar {
- 
-    border-radius: 20px;
-}
-.navbar{
-
-    border-radius: 20px;
-    
-}
-
-

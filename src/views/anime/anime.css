@@ -40,3 +40,28 @@ h2.anime-txt{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+#second-nav-bar{
+    display: flex;
+    margin: auto;
+    font-size: x-large;
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 6px;
+    margin: 6px;
+}
+
+.small-nav{
+    display: flex;
+    
+}
+
+div #container-anime{
+
+    display: flex;
+    justify-content: center;
+}
+
+#container-anime {
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
