@@ -38,13 +38,13 @@ const navigate = useNavigate();
         // console.log(form[0].value)
         const formData = new FormData(form);
         const formJson = Object.fromEntries(formData.entries());
-        console.log(formJson)
+        // console.log(formJson)
         axios.post('http://127.0.0.1:5000/api/get-user', JSON.stringify(formJson), {
             headers: { 'Content-Type': 'application/json' }
         }).then(function (response) {
-            console.log(response.data.data);
-            if(response.data.data){
-                setUser(response.data.data)
+            console.log(response.data);
+            if(response.data){
+                setUser(response.data)
                 navigate('/login')
               }else {
                 alert('User Exists')
@@ -56,7 +56,7 @@ const navigate = useNavigate();
             // alert('User Exists')
         })
     }
-            navigate('/login')
+    
     // const handleSubmit = e => {
     //     e.preventDefault();
     //     const form = e.target;
