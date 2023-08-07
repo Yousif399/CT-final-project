@@ -16,8 +16,6 @@ import { DataContext } from '../../context/DataProvider';
 
 
 
-
-
 const Anime = () => {
     const [anime, setAnime] = useState([])
     const [searchAnime, setSearchAnime] = useState('')
@@ -72,9 +70,6 @@ const Anime = () => {
     const firstPost = lastPost - postsPerPage;
     const currentPosts = anime.slice(firstPost, lastPost);
 
-    
-
-
     return (
         <>
             <Navbar className='navbar' >
@@ -101,10 +96,8 @@ const Anime = () => {
                         <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/10102/10102405.png' height='30px' /></Link>
                         <Link to='/fav' ><NavDropdown.Item ></NavDropdown.Item></Link>
                         <Link to='/fav'><NavDropdown.Item ></NavDropdown.Item></Link>
-
                         <Link to='/login' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239002.png' height='60px' /></Link>
                         <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
-
                     </div>
                 </NavDropdown>
                 <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
@@ -145,9 +138,7 @@ const Anime = () => {
                     <div className="dot"></div>
                     <h1>Loading...OR NO DATA  </h1>
                 </section>
-
-                }
-                
+            }
             </div >
                 <Pagination
                 totalPosts={anime.length}

@@ -17,7 +17,7 @@ const Favourite2 = () => {
 
  
     const getFavorite2 = async () => {
-        const response = await fetch(`http://127.0.0.1:5000/api/get-fav/movie`)
+        const response = await fetch(`https://watch-it-bakend.onrender.com/api/get-fav/movie`)
         const data = await response.json()
         // console.log(data.data)
         setFavorite(data.data)

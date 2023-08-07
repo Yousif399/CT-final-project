@@ -43,7 +43,7 @@ const ViewAnime = () => {
     const addFav = () =>{
         const item = [id,images.jpg.large_image_url]
         console.log(item)
-        axios.post('http://127.0.0.1:5000/api/favourite/anime',JSON.stringify(item),{
+        axios.post('https://watch-it-bakend.onrender.com/api/favourite/anime',JSON.stringify(item),{
             headers : {'Content-Type' : 'application/json'}
         }).then(function (response){
             console.log(response)
@@ -56,8 +56,6 @@ const ViewAnime = () => {
     }
     
   
-
-
     useEffect(() => {
         getAnime(id)
         getChar(id)

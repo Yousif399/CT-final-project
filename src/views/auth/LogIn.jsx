@@ -19,7 +19,7 @@ const LogIn = () => {
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
     // console.log(formJson);
-    axios.post(`http://127.0.0.1:5000/api/signin`,JSON.stringify(formJson),{
+    axios.post(`https://watch-it-bakend.onrender.com/api/signin`,JSON.stringify(formJson),{
       headers : {'Content-Type' : 'application/json'}
     }).then(function (response){
       console.log(response.data.data);
