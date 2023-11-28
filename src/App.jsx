@@ -22,6 +22,7 @@ import ViewFavourite1 from './views/ViewFavourite1'
 import ViewFavourite2 from './views/ViewFavourite2'
 import Favourite1 from './Favourite1'
 import Favourite2 from './Favourite2'
+import Checkout from './views/shop/Checkout'
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path='/shop2' element={<Shop2 />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/check-out' element={<Checkout/>}/>
 
         <Route path='/fav' element={<Favourite/>}/>
         <Route path='/fav1' element={<Favourite1/>}/>

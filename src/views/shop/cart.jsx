@@ -85,7 +85,7 @@ const Cart = (id) => {
 
       })}
       <div className="container" id='container'><button className="cart-delete" variant="danger" onClick={() => ClearCart()}>Delete</button></div>
-      <div className="container" id='container'><button className="cart-delete" variant="danger" onClick={() => ClearCart()}>Check Out</button></div>
+      <div className="container" id='container'><button href='/check-out' className="cart-delete" variant="danger" >Check Out</button></div>
       <Footer />
     </>
 

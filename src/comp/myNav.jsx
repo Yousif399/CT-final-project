@@ -33,10 +33,10 @@ const MyNav = () => {
 
     return (
 
-        <Navbar className='navbar' >
+        <Navbar className='navbar ' >
             <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='/src/img/Watch IT-1.png' height='120px' width='120px' /></Nav.Link>
             <Container>
-                <Nav className="me-auto">
+                <Nav className="me-auto ">
                     <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                     <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                     <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
@@ -62,13 +62,6 @@ const MyNav = () => {
                 </>:<button onClick={signIn} >Sign In</button>
 
             } */}
-            
-
-
-
-
-
-
             <NavDropdown className='me-5' id="basic-nav-dropdown">
                 <div className="sign-log-icons">
                     <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/1458/1458201.png' height='30px' /></Link>
@@ -86,10 +79,6 @@ const MyNav = () => {
             }
             
         </Navbar>
-
-
-
     )
 }
-
 export default MyNav;
