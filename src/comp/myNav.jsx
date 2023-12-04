@@ -3,16 +3,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom"
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import { useContext, useState } from 'react';
-import { Card } from "react-bootstrap";
-import { ListGroup } from "react-bootstrap"
 import '../views/tvshows/tvshow.css'
 import { DataContext } from '../context/DataProvider';
-import { useAuth, useSigninCheck, useUser } from 'reactfire';
-import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+
 
 
 
@@ -41,7 +35,7 @@ const MyNav = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto " >
-                            <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/mine"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>

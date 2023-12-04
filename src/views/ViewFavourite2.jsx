@@ -12,7 +12,7 @@ import Footer from './footer';
 const ViewFavourite2 = () => {
 
     const { id } = useParams();
-    console.log(id)
+    // console.log(id)
     const [movieInfo, setMovieInfo] = useState({})
     const [showMore, setShowMore] = useState(false)
     const { release_date, genres, spoken_languages,
@@ -41,7 +41,7 @@ const ViewFavourite2 = () => {
         <>
             <MyNav />
             <div className='view-movie'>
-                <Nav.Link href='/fav'><button> <i class="fa-solid fa-caret-left"></i>  Back</button></Nav.Link>
+                <Nav.Link href='/fav2'><button> <i class="fa-solid fa-caret-left"></i>  Back</button></Nav.Link>
                 <h1>{title ? title : name }....</h1>
                 <div className="details">
                     <div className="detail">

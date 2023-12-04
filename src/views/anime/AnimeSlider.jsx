@@ -5,9 +5,9 @@ import Footer from '../footer'
 const AnimeSlider = ({ actualData }) => {
     // const [showMore, setShowMore] = useState(false)
 
-    console.log('hello', actualData)
+    // console.log('hello', actualData)
     const { mal_id, title, status, score, images } = actualData
-    console.log(images)
+    // console.log(images)
     return (
         <>
             <div id='slide' className="container">

@@ -34,7 +34,7 @@ const TvShows = () => {
         try {
             const response = await fetch(`https://api.themoviedb.org/3/search/multi?query=${searchItem}&api_key=e832cdb11d340463dee240ac72d617f1`)
             const data = await response.json()
-            console.log(data)
+            // console.log(data)
             setTvShow(data.results)
         }
         catch (e) {
@@ -53,7 +53,7 @@ const TvShows = () => {
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=e832cdb11d340463dee240ac72d617f1&language=en-US`).then((response) => {
             setTvShow(response.data.results)
-            console.log(response.data.results)
+            // console.log(response.data.results)
 
 
         }).catch((err) => { console.log(err) })
@@ -65,25 +65,25 @@ const TvShows = () => {
         // console.log(response)
         const data = await response.json()
         setTvShow(data.results)
-        console.log(data)
+        // console.log(data)
     }
     const onTheAir = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/tv/on_the_air?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
         setTvShow(data.results)
-        console.log(data)
+        // console.log(data)
     }
     const trendingTvShow = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
         setTvShow(data.results)
-        console.log(data)
+        // console.log(data)
     }
 
     const lastPost = currentPage * postsPerPage;
     const firstPost = lastPost - postsPerPage;
     const currentPosts = tvShow.slice(firstPost, lastPost);
-    console.log(currentPosts)
+    // console.log(currentPosts)
 
 
 
@@ -93,12 +93,12 @@ const TvShows = () => {
     return (
         <>
             <Navbar className='navbar' expand='lg' >
-                <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
+                <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Container fluid>
                         <Nav className="me-auto">
-                            <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/main"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
@@ -124,7 +124,10 @@ const TvShows = () => {
 
                         </div>
                     </NavDropdown>
-                    <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                    {
+                        cart.size === 0 ? <Link id='nav-element' className="navbar-brand me-5 " to='/shop' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                            : <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                    }
                 </Navbar.Collapse>
 
             </Navbar>

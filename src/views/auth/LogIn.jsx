@@ -22,13 +22,13 @@ const LogIn = () => {
     axios.post(`https://watch-it-bakend.onrender.com/api/signin`,JSON.stringify(formJson),{
       headers : {'Content-Type' : 'application/json'}
     }).then(function (response){
-      console.log(response.data.data);
+      // console.log(response.data.data);
       if(response.data.data){
         setUser(response.data.data)
-        navigate('/')
+        navigate('/main')
       }else {
         alert('wrong pass')
-        console.log('noooo')
+        // console.log('noooo')
       }
       
     }).catch(function (error){

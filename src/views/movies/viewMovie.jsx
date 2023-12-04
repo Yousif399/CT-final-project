@@ -41,7 +41,7 @@ const ViewMovies = () => {
     const getTrailer = async (id) => {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
-        console.log(data.results[0].key)
+        // console.log(data.results[0].key)
         setMovie(data.results)
     }
 
@@ -64,15 +64,15 @@ const ViewMovies = () => {
     const whereToWatch = async (key) => {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
+        // console.log(data)
         setWatch(data.results.US.link)
 
-        // console.log(data.results)
     }
     const readReview = async (id) => {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
         setReview(data.results)
-        console.log(data)
+        // console.log(data)
     }
 
     useEffect(() => {
@@ -84,11 +84,11 @@ const ViewMovies = () => {
     }, [])
     const addFav = () =>{
         const item = [id,poster_path]
-        console.log(item)
+        // console.log(item)
         axios.post('https://watch-it-bakend.onrender.com/api/favourite/movie',JSON.stringify(item),{
             headers : {'Content-Type' : 'application/json'}
         }).then(function (response){
-            console.log(response)
+            // console.log(response)
         }).catch(function (error){
             console.log(error)
         })

@@ -47,7 +47,7 @@ const Favourite2 = () => {
             </div>
             <div id='tv-shows' className='container' >
                 {favorite ? favorite.map((f, index) => {
-                    console.log(f.img)
+                    // console.log(f.img)
                     return (
                         <>
                             < div className="container" key={index} >
@@ -61,7 +61,14 @@ const Favourite2 = () => {
 
                         </>
                     )
-                }) : null}
+                }) :  <section className="dots-container">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <h1>loading... </h1>
+              </section>}
 
 
 

@@ -19,16 +19,6 @@ const [uId, setUId] = useState('')
 
 
 const navigate = useNavigate();
-   
-
-  
-         
-            
-           
-       
-
-       
-
 
     let vals = {}
 
@@ -39,10 +29,11 @@ const navigate = useNavigate();
         const formData = new FormData(form);
         const formJson = Object.fromEntries(formData.entries());
         // console.log(formJson)
+        
         axios.post('https://watch-it-bakend.onrender.com/api/get-user', JSON.stringify(formJson), {
             headers: { 'Content-Type': 'application/json' }
         }).then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             if(response.data){
                 setUser(response.data)
                 navigate('/login')
@@ -53,7 +44,7 @@ const navigate = useNavigate();
             
         }).catch(function (error) {
             console.log(error);
-            // alert('User Exists')
+            alert('User Exists, Try adifferant username and email ')
         })
     }
     
@@ -97,17 +88,6 @@ const navigate = useNavigate();
                                             </div>
                                             <button type="submit" className="btn btn-primary">Sign Up</button>
                                         </form>
-                                        {/* {
-                                            bike.map((b) =>{
-                                                return (
-                                                    <>
-                                                    <h1>{b.make}</h1>
-                                                    <img src={b.img} height='50px' />
-                                                    </>
-
-                                                )
-                                            })
-                                        } */}
 
                                     </div>
                                 </div>

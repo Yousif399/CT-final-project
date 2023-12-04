@@ -8,7 +8,7 @@ import Footer from './footer';
 
 const ViewFavourite1 = () => {
   const { id } = useParams();
-  console.log(id)
+  // console.log(id)
   const [anime, setAnime] = useState({})
   const [showMore, setShowMore] = useState(false)
   const { title, synopsis, trailer,
@@ -20,7 +20,7 @@ const ViewFavourite1 = () => {
   const getMovieInfo = async () => {
     const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`)
     const data = await response.json()
-    console.log('movieee', data)
+    // console.log('movieee', data)
     setAnime(data.data)
   }
 
@@ -35,7 +35,7 @@ const ViewFavourite1 = () => {
     <>
       <MyNav />
       <div className='view-anime'>
-        <Nav.Link href='/fav'><button> <i class="fa-solid fa-caret-left"></i>  Back</button></Nav.Link>
+        <Nav.Link href='/fav1'><button> <i class="fa-solid fa-caret-left"></i>  Back</button></Nav.Link>
 
         <h1>{title}</h1>
         <div className="details">

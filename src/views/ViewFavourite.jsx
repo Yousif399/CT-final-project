@@ -12,7 +12,7 @@ import axios from 'axios';
 const ViewFavourite = () => {
 
     const { id } = useParams();
-    console.log(id)
+    // console.log(id)
     const [movieInfo, setMovieInfo] = useState({})
     const [showMore, setShowMore] = useState(false)
     const { release_date, genres, spoken_languages,
@@ -24,7 +24,7 @@ const ViewFavourite = () => {
     const getMovieInfo = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
-        console.log('movieee', data)
+        // console.log('movieee', data)
         setMovieInfo(data)
     }
 

@@ -31,7 +31,7 @@ const ViewTvShow = () => {
     const getTvInfo = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
-        console.log('ddd', data)
+        // console.log('ddd', data)
         setTvShowInfo(data)
     }
 
@@ -85,11 +85,11 @@ const ViewTvShow = () => {
     }, [])
     const addFav = () =>{
         const item = [id,poster_path]
-        console.log(item)
+        // console.log(item)
         axios.post('https://watch-it-bakend.onrender.com/api/favourite',JSON.stringify(item),{
             headers : {'Content-Type' : 'application/json'}
         }).then(function (response){
-            console.log(response)
+            // console.log(response)
         }).catch(function (error){
             console.log(error)
         })

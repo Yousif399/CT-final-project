@@ -32,8 +32,8 @@ function App() {
     <>
 
       <Routes>
-        <Route path='/' element={<Header/>}/>
-        <Route path='/main' element={<Home />} />
+        <Route path='/main' element={<Header/>}/>
+        <Route path='/mine' element={<Home />} />
         <Route path='/homemovie/:id' element={<ViewHome />} />  
 
 

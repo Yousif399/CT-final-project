@@ -13,7 +13,7 @@ const Favourite1 = () => {
     const getFavorite1 = async () => {
         const response = await fetch(`https://watch-it-bakend.onrender.com/api/get-fav/anime`)
         const data = await response.json()
-        console.log(data.data)
+        // console.log(data.data)
         setFavorite(data.data)
     }
     useEffect(() => {
@@ -36,7 +36,7 @@ const Favourite1 = () => {
             </div>
             <div id='tv-shows' className='container' >
                 {favorite ? favorite.map((f, index) => {
-                    console.log(f.img)
+                    // console.log(f.img)
                     return (
                         <>
                             < div className="container" key={index} >
@@ -52,7 +52,14 @@ const Favourite1 = () => {
 
                         </>
                     )
-                }) : null}
+                }) :  <section className="dots-container">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <h1>loading... </h1>
+              </section>}
 
 
 

@@ -63,7 +63,14 @@ const Favourite = () => {
 
                         
                     )
-                }) : null}
+                }) :  <section className="dots-container">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <h1>loading... </h1>
+              </section>}
 
 
 

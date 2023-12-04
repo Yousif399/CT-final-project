@@ -5,17 +5,20 @@ import { Link } from "react-router-dom"
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Card } from "react-bootstrap";
 import { ListGroup } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel';
 import './home.css'
 import Footer from '../footer';
+import { DataContext } from '../../context/DataProvider';
 
 const Home = () => {
   const [movie, setMovie] = useState([])
   const [searchItem, setSearchItem] = useState('')
   const [trending, setTrending] = useState([])
+  const { cart, setCart } = useContext(DataContext)
+
 
 
   const SerachShows = async (e) => {
@@ -24,7 +27,7 @@ const Home = () => {
     try {
       const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchItem}&api_key=e832cdb11d340463dee240ac72d617f1`)
       const data = await response.json()
-      console.log(data)
+      // console.log(data)
       setMovie(data.results)
     }
     catch (e) {
@@ -42,7 +45,7 @@ const Home = () => {
   const getTrending = async () => {
     const response = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=e832cdb11d340463dee240ac72d617f1`)
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
     setTrending(data.results)
   }
 
@@ -55,13 +58,13 @@ const Home = () => {
       <div>
         <Navbar className='navbar' expand='lg' >
           <Container fluid >
-            <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
+            <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
 
 
               <Nav className="me-auto">
-                <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                <Nav.Link id='nav-element' className="navbar-brand" href="/main"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                 <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                 <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
                 <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
@@ -84,14 +87,17 @@ const Home = () => {
                   <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
                 </div>
               </NavDropdown>
-              <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' /></Link>
+              {
+                cart.size === 0 ? <Link id='nav-element' className="navbar-brand me-5 " to='/shop' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                  : <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+              }
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
         <div id='tv-shows' className='container' >
           {movie && movie.length > 0 ? movie.map((m, index) => {
-            console.log(movie)
+            // console.log(movie)
             return (
               // to={`/anime/${a.mal_id}`}
               <div className="container" key={index}>

@@ -10,7 +10,7 @@ import Footer from '../footer';
 
 const Cart = (id) => {
   const { cart, setCart } = useContext(DataContext)
-  console.log(cart)
+  // console.log(cart)
 
   const ClearCart = () => {
     return setCart({ size: 0, total: 0, products: {} });
@@ -18,7 +18,7 @@ const Cart = (id) => {
   }
   const addProduct = (id) => {
     let copyCart = { ...cart };
-    console.log(copyCart)
+    // console.log(copyCart)
     copyCart.size++;
     copyCart.total += Math.floor(copyCart.products[id].data.price * 100) / 100
     copyCart.products[id] ?
@@ -54,7 +54,7 @@ const Cart = (id) => {
 
       {Object.values(cart.products).map((p, index) => {
     
-        console.log(p)
+        // console.log(p)
         return (
 
           <div className="container" key={index}>

@@ -17,7 +17,7 @@ const ViewAnime = () => {
 
 
 
-    const {title, synopsis, trailer,
+    const { title, synopsis, trailer,
         duration, aired, season, images,
         rank, score, scored_by, popularity,
         status, rating, source } = anime
@@ -28,7 +28,7 @@ const ViewAnime = () => {
         const response = await fetch(`https://api.jikan.moe/v4/anime/${anime}`)
         // console.log(response)
         const data = await response.json()
-        console.log('dataaaaaa', data.data)
+        // console.log('dataaaaaa', data.data)
         setAnime(data.data)
 
     }
@@ -38,28 +38,28 @@ const ViewAnime = () => {
         // console.log(data.data)
         setChar(data.data)
     }
-  
 
-    const addFav = () =>{
-        const item = [id,images.jpg.large_image_url]
+
+    const addFav = () => {
+        const item = [id, images.jpg.large_image_url]
         console.log(item)
-        axios.post('https://watch-it-bakend.onrender.com/api/favourite/anime',JSON.stringify(item),{
-            headers : {'Content-Type' : 'application/json'}
-        }).then(function (response){
-            console.log(response)
-        }).catch(function (error){
+        axios.post('https://watch-it-bakend.onrender.com/api/favourite/anime', JSON.stringify(item), {
+            headers: { 'Content-Type': 'application/json' }
+        }).then(function (response) {
+            // console.log(response)
+        }).catch(function (error) {
             console.log(error)
         })
-     
+
 
 
     }
-    
-  
+
+
     useEffect(() => {
         getAnime(id)
         getChar(id)
-  
+
     }, [])
 
 
@@ -68,8 +68,8 @@ const ViewAnime = () => {
         <>
             <MyNav />
             <div className='view-anime'>
-            <Nav.Link href='/anime'><button> <i class="fa-solid fa-caret-left"></i>  Back</button></Nav.Link>
-                
+                <Nav.Link href='/anime'><button> <i class="fa-solid fa-caret-left"></i>  Back</button></Nav.Link>
+
                 <h1>{title}</h1>
                 <div className="details">
                     <div className="detail">
@@ -131,7 +131,7 @@ const ViewAnime = () => {
                     })}
                 </div>
             </div>
-            <Footer/>
+            <Footer />
 
         </>
     )

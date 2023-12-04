@@ -27,19 +27,19 @@ const Header = () => {
     const trendingMovies = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
-        console.log(data.results)
+        // console.log(data.results)
         setMovie(data.results)
     }
     const trendingTvs = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=e832cdb11d340463dee240ac72d617f1`)
         const data = await response.json()
-        console.log(data.results)
+        // console.log(data.results)
         setTvShow(data.results)
     }
     const sliderAnime = async () => {
         const response = await fetch(`https://api.jikan.moe/v4/seasons/now`)
         const data = await response.json()
-        console.log(data.data)
+        // console.log(data.data)
         setAnotherAnime(data.data)
     }
     const SerachTvMovie = async (e) => {
@@ -48,7 +48,7 @@ const Header = () => {
         try {
             const response = await fetch(`https://api.themoviedb.org/3/search/multi?query=${searchItem}&api_key=e832cdb11d340463dee240ac72d617f1`)
             const data = await response.json()
-            console.log(data)
+            // console.log(data)
             setMovie(data.results)
         }
         catch (e) {
@@ -93,11 +93,11 @@ const Header = () => {
                 
                 <Navbar className='navbar m-b-200' expand='lg'  >
                     <Container fluid  >
-                    <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='src/views/img/Watch IT-1.png' height='120px' width='120px' /></Nav.Link>
+                    <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='src/views/img/Watch IT-1.png' height='120px' width='120px' /></Nav.Link>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                                <Nav.Link id='nav-element' className="navbar-brand" href="/main"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                                 <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                                 <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
                                 <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
@@ -115,7 +115,7 @@ const Header = () => {
                                 <div className="sign-log-icons">
                                     <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/1458/1458201.png' height='30px' /></Link>
                                     <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/10102/10102405.png' height='30px' /></Link>
-                                    <Link to='/' ></Link>
+                                    <Link to='/main' ></Link>
                                     <Link to='/fav'><NavDropdown.Item ></NavDropdown.Item></Link>
 
                                     <Link to='/login' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239002.png' height='60px' /></Link>
@@ -123,7 +123,10 @@ const Header = () => {
 
                                 </div>
                             </NavDropdown>
-                            <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                            {
+                                cart.size === 0 ? <Link id='nav-element' className="navbar-brand me-5 " to='/shop' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                                    : <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                            }
                         </Navbar.Collapse>
 
                     </Container>

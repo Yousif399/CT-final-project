@@ -32,7 +32,7 @@ const Anime = () => {
             const response = await fetch(`https://api.jikan.moe/v4/anime?q=${searchAnime}`)
             console.log(response)
             const data = await response.json()
-            console.log(data)
+            // console.log(data)
             setAnime(data.data)
         }
         catch (e) {
@@ -59,7 +59,7 @@ const Anime = () => {
     const upComing = async () => {
         const response = await fetch(`https://api.jikan.moe/v4/seasons/upcoming`)
         const data = await response.json()
-        console.log(data.data)
+        // console.log(data.data)
         setAnime(data.data)
     }
     const changeHandler = (e) => {
@@ -73,12 +73,12 @@ const Anime = () => {
     return (
         <>
             <Navbar className='navbar' expand='lg' >
-                <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
+                <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Container fluid>
                         <Nav className="me-auto">
-                            <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/main"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
@@ -102,7 +102,10 @@ const Anime = () => {
                             <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
                         </div>
                     </NavDropdown>
-                    <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                    {
+                        cart.size === 0 ? <Link id='nav-element' className="navbar-brand me-5 " to='/shop' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                            : <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                    }
                 </Navbar.Collapse>
             </Navbar>
             <div id='container-anime' className="container">

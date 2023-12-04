@@ -67,7 +67,7 @@ const ViewHome = () => {
         <>
             <MyNav />
             <div className='view-movie'>
-                <Nav.Link href='/'><button className='btn btn-dark' variant="outline-dark" >Go Back</button></Nav.Link>
+                <Nav.Link href='/main'><button className='btn btn-dark' variant="outline-dark" >Go Back</button></Nav.Link>
                 <h1>{title}...</h1>
                 <div className="details">
                     <div className="detail">
