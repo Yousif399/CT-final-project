@@ -38,7 +38,7 @@ const Favourite2 = () => {
                 <Navbar   >
                     <Container>
                         <Nav className="me-auto">
-                        <Link id='second-nav-bar' className="navbar-brand"   >TvShows</Link>
+                        <Link to='/fav'  id='second-nav-bar' className="navbar-brand"   >TvShows</Link>
                             <Link to='/fav1' id='second-nav-bar' className="navbar-brand">Animes</Link>
                             <Link to='/fav2'  id='second-nav-bar' className="navbar-brand">Movies</Link>
                         </Nav>
