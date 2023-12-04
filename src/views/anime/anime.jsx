@@ -22,7 +22,7 @@ const Anime = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(9);
     const { cart, setCart } = useContext(DataContext)
-   
+
 
 
     const searchAnimes = async (e) => {
@@ -72,35 +72,38 @@ const Anime = () => {
 
     return (
         <>
-            <Navbar className='navbar' >
+            <Navbar className='navbar' expand='lg' >
                 <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
-                <Container>
-                    <Nav className="me-auto">
-                        <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
-                        <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
-                        <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
-                        <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
-                        <Nav.Link id='nav-element' className="navbar-brand " href="/shop"><img src='https://cdn-icons-png.flaticon.com/512/4213/4213169.png' height='35px' />
-                        </Nav.Link>
-                    </Nav>
-                </Container>
-                <Form className="d-flex" onSubmit={searchAnimes} >
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Container fluid>
+                        <Nav className="me-auto">
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand " href="/shop"><img src='https://cdn-icons-png.flaticon.com/512/4213/4213169.png' height='35px' />
+                            </Nav.Link>
+                        </Nav>
+                    </Container>
+                    <Form className="d-flex" onSubmit={searchAnimes} >
 
-                    <Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search" name='searchAnime' value={searchAnime} onChange={changeHandler} />
-                    <Button id='nav-element' className='me-3  ' variant="outline-dark" onClick={searchAnimes} > <img src='https://cdn-icons-png.flaticon.com/512/10613/10613716.png' height='31px' /> </Button>
-                </Form>
-                <img src='https://cdn-icons-png.flaticon.com/512/10709/10709674.png' height='35px' />
-                <NavDropdown className='me-5' id="basic-nav-dropdown">
-                    <div className="sign-log-icons">
-                    <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/1458/1458201.png' height='30px' /></Link>
-                        <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/10102/10102405.png' height='30px' /></Link>
-                        <Link to='/fav' ><NavDropdown.Item ></NavDropdown.Item></Link>
-                        <Link to='/fav'><NavDropdown.Item ></NavDropdown.Item></Link>
-                        <Link to='/login' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239002.png' height='60px' /></Link>
-                        <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
-                    </div>
-                </NavDropdown>
-                <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                        <Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search" name='searchAnime' value={searchAnime} onChange={changeHandler} />
+                        <Button id='nav-element' className='me-3  ' variant="outline-dark" onClick={searchAnimes} > <img src='https://cdn-icons-png.flaticon.com/512/10613/10613716.png' height='31px' /> </Button>
+                    </Form>
+                    <img src='https://cdn-icons-png.flaticon.com/512/10709/10709674.png' height='35px' />
+                    <NavDropdown className='me-5' id="basic-nav-dropdown">
+                        <div className="sign-log-icons">
+                            <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/1458/1458201.png' height='30px' /></Link>
+                            <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/10102/10102405.png' height='30px' /></Link>
+                            <Link to='/fav' ><NavDropdown.Item ></NavDropdown.Item></Link>
+                            <Link to='/fav'><NavDropdown.Item ></NavDropdown.Item></Link>
+                            <Link to='/login' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239002.png' height='60px' /></Link>
+                            <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
+                        </div>
+                    </NavDropdown>
+                    <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+                </Navbar.Collapse>
             </Navbar>
             <div id='container-anime' className="container">
                 <Navbar   >
@@ -129,25 +132,25 @@ const Anime = () => {
                             </div>
                         </div>
                     )
-                }) : 
-                <section className="dots-container">
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <h1>Loading...OR NO DATA  </h1>
-                </section>
-            }
+                }) :
+                    <section className="dots-container">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <h1>Loading...OR NO DATA  </h1>
+                    </section>
+                }
             </div >
-                <Pagination
+            <Pagination
                 totalPosts={anime.length}
                 postsPerPage={postsPerPage}
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}
             />
 
-            <Footer/>
+            <Footer />
 
 
         </>

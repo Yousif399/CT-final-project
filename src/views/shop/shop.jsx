@@ -99,38 +99,41 @@ const Shop = () => {
 
   return (
     <>
-      <Navbar className='navbar' >
+      <Navbar className='navbar' expand='lg'>
         <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
-        <Container>
-          <Nav className="me-auto">
-            <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
-            <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
-            <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
-            <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
-            <Nav.Link id='nav-element' className="navbar-brand " href="/shop"><img src='https://cdn-icons-png.flaticon.com/512/4213/4213169.png' height='35px' />
-            </Nav.Link>
-          </Nav>
-        </Container>
-        <a href='/shop2'>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Container fluid>
+            <Nav className="me-auto">
+              <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+              <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
+              <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
+              <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
+              <Nav.Link id='nav-element' className="navbar-brand " href="/shop"><img src='https://cdn-icons-png.flaticon.com/512/4213/4213169.png' height='35px' />
+              </Nav.Link>
+            </Nav>
+          </Container>
+          <a href='/shop2'>
 
-          <Form className="d-flex" onSubmit={searchItem} >
-            < Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search" name='search' value={search} onChange={changeHandler} />
-            <Button id='nav-element' className='me-3  ' variant="outline-dark" onClick={searchItem} > <img src='https://cdn-icons-png.flaticon.com/512/10613/10613716.png' height='31px' /> </Button>
-          </Form></a>
-        <img src='https://cdn-icons-png.flaticon.com/512/10709/10709674.png' height='35px' />
-        <NavDropdown className='me-5' id="basic-nav-dropdown">
-          <div className="sign-log-icons">
-            <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/1458/1458201.png' height='30px' /></Link>
-            <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/10102/10102405.png' height='30px' /></Link>
-            <Link to='/signin' ><NavDropdown.Item ></NavDropdown.Item></Link>
-            <Link to='/signup'><NavDropdown.Item ></NavDropdown.Item></Link>
+            <Form className="d-flex" onSubmit={searchItem} >
+              < Form.Control type="search" placeholder="Search" className="me-1" aria-label="Search" name='search' value={search} onChange={changeHandler} />
+              <Button id='nav-element' className='me-3  ' variant="outline-dark" onClick={searchItem} > <img src='https://cdn-icons-png.flaticon.com/512/10613/10613716.png' height='31px' /> </Button>
+            </Form></a>
+          <img src='https://cdn-icons-png.flaticon.com/512/10709/10709674.png' height='35px' />
+          <NavDropdown className='me-5' id="basic-nav-dropdown">
+            <div className="sign-log-icons">
+              <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/1458/1458201.png' height='30px' /></Link>
+              <Link to='/fav' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/10102/10102405.png' height='30px' /></Link>
+              <Link to='/signin' ><NavDropdown.Item ></NavDropdown.Item></Link>
+              <Link to='/signup'><NavDropdown.Item ></NavDropdown.Item></Link>
 
-            <Link to='/login' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239002.png' height='60px' /></Link>
-            <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
+              <Link to='/login' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239002.png' height='60px' /></Link>
+              <Link to='/signup' className='loginicon'><img src='https://cdn-icons-png.flaticon.com/512/6239/6239065.png' height='61px' /></Link>
 
-          </div>
-        </NavDropdown>
-        <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+            </div>
+          </NavDropdown>
+          <Link id='nav-element' className="navbar-brand me-5 " to='/cart' ><img src='	https://cdn-icons-png.flaticon.com/512/10683/10683181.png' height='39px' />{cart.size}</Link>
+        </Navbar.Collapse>
       </Navbar>
       <div id='container-anime' className="container">
         <Navbar   >
