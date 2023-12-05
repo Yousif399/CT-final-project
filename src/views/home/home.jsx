@@ -58,7 +58,7 @@ const Home = () => {
       <div>
         <Navbar className='navbar' expand='lg' >
           <Container fluid >
-            <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='src/views/img/Watch IT-1.png ' height='120px' width='120px' /></Nav.Link>
+            <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='./src/views/img/Watch IT-1.png' height='120px' width='120px' /></Nav.Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
 

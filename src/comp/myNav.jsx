@@ -30,7 +30,7 @@ const MyNav = () => {
     return (
         
             <Navbar expand="lg" className='navbar ' >
-                <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='/src/img/Watch IT-1.png' height='120px' width='120px' /></Nav.Link>
+                <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='/src/views/img/Watch IT-1.png' height='120px' width='120px' /></Nav.Link>
                 <Container fluid className="mt-lg-0 mt-3" >
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
