@@ -164,7 +164,7 @@ hr{
     transition: .2s ease-in-out;
   }
   
-  .instagram {
+  .linkdein {
     margin-top: 1.5em;
     margin-left: 1.2em;
     fill: #cc39a4;
@@ -181,10 +181,10 @@ hr{
     transition: .2s ease-in-out;
   }
   
-  .twitter {
-    margin-top: 1.5em;
+  .instagram {
+    margin-top: 2em;
     margin-left: -.9em;
-    fill: #03A9F4;
+    fill: #cc39a4;
   }
   
   .card3-media {

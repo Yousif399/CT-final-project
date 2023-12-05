@@ -40,9 +40,6 @@ const LogIn = () => {
   <>
   <MyNav/>
   
-  
- 
-
     <div className="container">
       <div className="sh">
         <div className="form-box">

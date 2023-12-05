@@ -30,12 +30,12 @@ const MyNav = () => {
     return (
         
             <Navbar expand="lg" className='navbar ' >
-                <Nav.Link id='app-logo' className="navbar-brand " href="/main"><img src='https://i.ibb.co/1Lg57YW/Watch-IT-1.png' height='120px' width='120px' /></Nav.Link>
+                <Nav.Link id='app-logo' className="navbar-brand " href="/mine"><img src='https://i.ibb.co/1Lg57YW/Watch-IT-1.png' height='120px' width='120px' /></Nav.Link>
                 <Container fluid className="mt-lg-0 mt-3" >
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto " >
-                            <Nav.Link id='nav-element' className="navbar-brand" href="/mine"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
+                            <Nav.Link id='nav-element' className="navbar-brand" href="/"> <img src='https://cdn-icons-png.flaticon.com/512/10613/10613644.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/tvshows"> <img src='https://cdn-icons-png.flaticon.com/512/5181/5181389.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='nav-element' className="navbar-brand" href="/movie"> <img src='https://cdn-icons-png.flaticon.com/512/10939/10939564.png' height='35px' /> </Nav.Link>
                             <Nav.Link id='anime' className="navbar-brand" href="/anime"><img src='https://cdn-icons-png.flaticon.com/512/2314/2314736.png' height='35px' /></Nav.Link>
