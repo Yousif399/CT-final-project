@@ -32,7 +32,7 @@ function App() {
     <>
 
       <Routes>
-        <Route path='/main' element={<Header/>}/>
+        <Route path='/' element={<Header/>}/>
         <Route path='/mine' element={<Home />} />
         <Route path='/homemovie/:id' element={<ViewHome />} />  
 
